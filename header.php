@@ -36,7 +36,7 @@
 								$ashar_site_title            = get_bloginfo( 'name' );
 								$ashar_site_title_letter     = substr( $ashar_site_title, -2, 1 );
 								$ashar_site_title_first_part = substr( $ashar_site_title, 0, -2 );
-								$ashar_site_title_last_part  = substr( $ashar_site_title, -1 );
+								$ashar_site_title_last_part  = substr( $ashar_site_title, -1 ); 
 								if ( is_front_page() && is_home() ) :
 									?>
 									<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><strong><?php echo esc_html( $ashar_site_title_first_part ); ?></strong><span><?php echo esc_html( $ashar_site_title_letter ); ?></span><strong><?php echo esc_html( $ashar_site_title_last_part ); ?></strong></a></h1>
