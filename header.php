@@ -75,17 +75,6 @@
 							endif;
 							?>
 
-							<?php
-							if (has_nav_menu('menu-2')) :
-								wp_nav_menu(
-									array(
-										'theme_location' => 'menu-2',
-										'menu_id'        => 'social-menu',
-										'menu_class'     => 'navbar-nav',
-									)
-								);
-							endif;
-							?>
 						</div>
 					</div><!-- .navbar-wrap -->
 				</div><!-- .container -->
