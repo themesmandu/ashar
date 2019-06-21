@@ -18,7 +18,7 @@ if ( ! function_exists( 'ashar_dynamic_styles' ) ) :
 		if ( is_front_page() ) :
 			?>
 			<style type="text/css">
-	header.site-header {
+	header.site-headers {
 		background-image: url(
 			<?php
 			header_image();

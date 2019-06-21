@@ -3,10 +3,10 @@ jQuery(document).ready(function($) {
 
     $(window).scroll(function() {
         var height = $(window).scrollTop();
-        if (height > 300) {
-            $('.main-navigation, #up-btn').addClass('fixed');
+        if (height > 100) {
+            $('.main-navigation').addClass('fixed');
         } else {
-            $('.main-navigation, #up-btn').removeClass('fixed');
+            $('.main-navigation').removeClass('fixed');
         }
     });
 
@@ -23,6 +23,15 @@ jQuery(document).ready(function($) {
     }
 
     // To top Java Script
+
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        if (height > 300) {
+            $('#up-btn').addClass('show');
+        } else {
+            $('#up-btn').removeClass('show');
+        }
+    });
 
     $('#up-btn').click(function() {
         $('html, body').animate({ scrollTop: 0 }, 1000);

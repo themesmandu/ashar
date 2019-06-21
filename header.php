@@ -91,9 +91,75 @@
 				</div><!-- .container -->
 			</nav><!-- #site-navigation -->
 
-			<div class="container header-wrap">
-				<?php ashar_header_page_title(); ?>
-			</div><!-- .container -->
+			<div id="image_slider">
+				<div class="slider_images">
+					<ul>
+						<li>
+							<img src="<?php echo get_template_directory_uri() . '/assets/images/one.jpg'; ?>" alt="one" title="one" />
+							<div class="slide_caption">
+								<span class="square-1"></span>
+								<span class="square-2"></span>
+								<span class="square-3"></span>
+								<span class="square-4"></span>
+								<span class="square-5"></span>
+								<span class="square-6"></span>
+								<span class="square-7"></span>
+								<span class="square-8"></span>
+								<span class="square-9"></span>
+								<span class="square-10"></span>
+								<span class="square-11"></span>
+								<span class="square-12"></span>
+								<span class="square-13"></span>
+								<span class="square-14"></span>
+								<span class="square-15"></span>
+								<div class="slide_content">
+									<h2>Bringing the best digital solutions for your brands</h2>
+									<a href="#">Find out how </a>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<img src="<?php echo get_template_directory_uri() . '/assets/images/two.jpg'; ?>" alt="two" title="two" />
+							<div class="slide_caption">
+								<span class="square-6"></span>
+								<span class="square-7"></span>
+								<span class="square-9"></span>
+								<span class="square-11"></span>
+								<span class="square-12"></span>
+								<span class="square-14"></span>
+								<span class="square-15"></span>
+								<div class="slide_content">
+									<h2>Bringing the best digital solutions for your brands</h2>
+									<a href="#">Find out how </a>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<img src="<?php echo get_template_directory_uri() . '/assets/images/three.jpg'; ?>" alt="three" title="three" />
+							<div class="slide_caption">
+								<span class="square-2"></span>
+								<span class="square-4"></span>
+								<span class="square-8"></span>
+								<span class="square-11"></span>
+								<span class="square-14"></span>
+								<span class="square-15"></span>
+								<span class="square-16"></span>
+								<div class="slide_content">
+									<h2>Aliquam tincidunt velit ut felis malesuada.</h2>
+									<a href="#">Find out how </a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slider_indicator">
+					<a href="#" title="one"><span>01</span></a>
+					<a href="#" title="two"><span>02</span></a>
+					<a href="#" title="three"><span>03</span></a>
+				</div>
+			</div>
 		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">

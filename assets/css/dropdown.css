@@ -4,7 +4,6 @@
     width: 250px;
     border-radius: 3px;
     background: #ffffff;
-    padding: 15px 0;
     z-index: 9;
     animation: fadeInUp .2s ease-in;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .25);
@@ -24,7 +23,7 @@
 
 .navbar-expand-lg .navbar-nav .menu-item-has-children .sub-menu .nav-link {
     color: #333333;
-    padding: 5px 28px;
+    padding: 15px 28px;
     display: block;
 }
 
@@ -43,9 +42,9 @@
 
 .sub-menu .menu-item-has-children::after {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    transform: rotate(-90deg);
+    top: 20px;
+    left: 15px;
+    transform: rotate(90deg);
     color: #333333;
     margin: 0;
 }
@@ -81,11 +80,12 @@
         top: 0;
     }
     .main-navigation ul ul li:hover>ul {
-        left: 100%;
+        right: 100%;
     }
     .main-navigation ul li:hover>ul {
         display: block;
-        left: 0;
+        right: 0;
+        text-align: right;
     }
 }
 

@@ -15,104 +15,82 @@
 get_header();
 ?>
 
+<section class="section_one">
+    <div class="container">
+        <h2 class="section_title">We're always ready for challenges.</h2>
+        <div class="row">
+            <div class="col-lg-4 column">
+                <figure>
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/one.jpg'; ?>" />
+                </figure>
 
-<?php
-// Query random posts.
-$the_query = new WP_Query(
-	array(
-		'post_type'           => 'post',
-		'orderby'             => 'DESC',
-		'ignore_sticky_posts' => 1,
-		'posts_per_page'      => 3,
-	)
-);
-?>
-<?php
-// If we have posts lets show them.
-if ( $the_query->have_posts() ) :
-	?>
-	<section class="section_one">
-		<div class="container">
-			<h2 class="section-title"><span><?php esc_html_e( 'Latest Stories', 'text_domain' ); ?></span></h2>
-			<div class="row">
-				<?php
-				// Loop through the posts.
-				while ( $the_query->have_posts() ) :
-					$the_query->the_post();
-					?>
+                <div class="content">
+                    <h4>Digital Marketing</h4>
+                    <p>We conduct the marketing of products & services using latest digital technologies.</p>
+                </div>
+            </div>
 
-					<article class="col-sm-12">
-						<figure>
-							<a href="<?php the_permalink(); ?>">
-								<?php ashar_post_thumbnail(); ?>
-							</a>
-							<div class="blog_content">
-								<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-								<?php the_excerpt(); ?>
-							</div>
-						</figure>
-					</article>
+            <div class="col-lg-4 column">
+                <figure>
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/two.jpg'; ?>" />
+                </figure>
 
-				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-			</div>
-		</div>
-	</section>
-<?php endif; ?>
+                <div class="content">
+                    <h4>Digital Marketing</h4>
+                    <p>Our approach is to focus on growing visibility in organic search engine results.</p>
+                </div>
+            </div>
 
-<?php
-// Query random posts.
-$the_query = new WP_Query(
-	array(
-		'post_type'           => 'post',
-		// 'orderby'             => 'rand',
-		'ignore_sticky_posts' => 1,
-		'posts_per_page'      => 6,
-	)
-);
-?>
-<?php
-// If we have posts lets show them.
-if ( $the_query->have_posts() ) :
-	?>
-	<section class="section_two">
-		<div class="container">
-			<h2 class="section-title"><span><?php esc_html_e( 'Read on', 'text_domain' ); ?></span></h2>
-			<div class="row">
-				<?php
-				// Loop through the posts.
-				while ( $the_query->have_posts() ) :
-					$the_query->the_post();
-					?>
+            <div class="col-lg-4 column">
+                <figure>
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/three.jpg'; ?>" />
+                </figure>
 
-					<article class="col-sm-6">
-						<figure>
-							<a href="<?php the_permalink(); ?>">
-								<?php ashar_post_thumbnail(); ?>
-							</a>
-							<div class="blog_content">
-								<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-							</div>
-						</figure>
-					</article>
+                <div class="content">
+                    <h4>Digital Marketing</h4>
+                    <p>We successfully implemented numerous UI/UX projects for both global & local clients.</p>
+                </div>
+            </div>
 
-				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-			</div>
-		</div>
-	</section>
-<?php endif; ?>
+            <div class="col-lg-4 column">
+                <figure>
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/two.jpg'; ?>" />
+                </figure>
 
-<script>
-	jQuery(document).ready(function($) {
-		$('.widget_newsletterwidget').find("input[type=email]").each(function() {
-			if (!$(this).val()) {
-				$(this).attr("placeholder", "email address");
-			}
-		});
-	});
-</script>
+                <div class="content">
+                    <h4>Digital Marketing</h4>
+                    <p>We successfully implemented numerous UI/UX projects for both global & local clients.</p>
+                </div>
+            </div>
 
+            <div class="col-lg-4 column">
+                <figure>
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/three.jpg'; ?>" />
+                </figure>
+
+                <div class="content">
+                    <h4>Digital Marketing</h4>
+                    <p>We successfully implemented numerous UI/UX projects for both global & local clients.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 column">
+                <figure>
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/one.jpg'; ?>" />
+                </figure>
+
+                <div class="content">
+                    <h4>Digital Marketing</h4>
+                    <p>We successfully implemented numerous UI/UX projects for both global & local clients.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section_two">
+    
+</section>
 
 <?php
 get_footer();
