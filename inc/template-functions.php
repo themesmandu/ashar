@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package ashar
+ * @package Ashar
  */
 
 /**
@@ -35,3 +35,29 @@ function ashar_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'ashar_pingback_header' );
+
+/**
+ * Use front-page.php when Front page displays is set to a static page.
+ *
+ * @since Ashar 1.0
+ *
+ * @param string $template front-page.php.
+ *
+ * @return string The template to be used: blank if is_home() is true (defaults to index.php), else $template.
+ */
+function ashar_front_page_template( $template ) {
+	return is_home() ? '' : $template;
+}
+add_filter( 'frontpage_template', 'ashar_front_page_template' );
+
+/**
+ * Adds custom classes to the menu.
+ *
+ * @param array $classes Classes for a element.
+ * @return array
+ */
+function ashar_add_classes_on_link_attributes( $classes ) { 
+	$classes['class'] = 'nav-link';
+	return $classes;
+}
+add_filter( 'nav_menu_link_attributes', 'ashar_add_classes_on_link_attributes' );

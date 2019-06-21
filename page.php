@@ -9,14 +9,15 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package ashar
+ * @package Ashar
  */
 
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="container">
+	<div class="row">
+		<main id="main" class="col-lg-12">
 
 		<?php
 		while ( have_posts() ) :
@@ -33,8 +34,8 @@ get_header();
 		?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div><!-- .row -->
+</div><!-- .container -->
 
 <?php
-get_sidebar();
 get_footer();

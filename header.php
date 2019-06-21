@@ -6,14 +6,15 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package ashar
+ * @package Ashar
  */
 
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
@@ -21,38 +22,78 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ashar' ); ?></a>
+	<div id="page" class="site">
+		<header class="site-header">
+			<nav id="site-navigation" class="main-navigation">
+				<div class="container">
+					<div class="navbar navbar-expand-lg top-navigation">
+						<div class="site-branding">
+							<?php
+							if (has_custom_logo()) :
+								the_custom_logo();
+							else :
+								the_custom_logo();
+								$ashar_site_title            = get_bloginfo('name');
+								$ashar_site_title_letter     = substr($ashar_site_title, -2, 1);
+								$ashar_site_title_first_part = substr($ashar_site_title, 0, -2);
+								$ashar_site_title_last_part  = substr($ashar_site_title, -1);
+								if (is_front_page() && is_home()) :
+									?>
+									<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><strong><?php echo esc_html($ashar_site_title_first_part); ?></strong><span><?php echo esc_html($ashar_site_title_letter); ?></span><strong><?php echo esc_html($ashar_site_title_last_part); ?></strong></a></h1>
+								<?php
+							else :
+								?>
+									<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><strong><?php echo esc_html($ashar_site_title_first_part); ?></strong><span><?php echo esc_html($ashar_site_title_letter); ?></span><strong><?php echo esc_html($ashar_site_title_last_part); ?></strong></a></p>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$ashar_description = get_bloginfo( 'description', 'display' );
-			if ( $ashar_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $ashar_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+								<?php
+							endif;
+							$ashar_description = get_bloginfo('description', 'display');
+							if ($ashar_description || is_customize_preview()) :
+								?>
+									<p class="site-description"><?php echo $ashar_description; /* WPCS: xss ok. */ ?></p>
+								<?php
+							endif;
+						endif;
+						?>
+						</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ashar' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+						<button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmenus">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarmenus">
+							<?php
+							if (has_nav_menu('menu-1')) :
+								wp_nav_menu(
+									array(
+										'theme_location' => 'menu-1',
+										'menu_id'        => 'primary-menu',
+										'menu_class'     => 'navbar-nav',
+									)
+								);
+							endif;
+							?>
 
-	<div id="content" class="site-content">
+							<?php
+							if (has_nav_menu('menu-2')) :
+								wp_nav_menu(
+									array(
+										'theme_location' => 'menu-2',
+										'menu_id'        => 'social-menu',
+										'menu_class'     => 'navbar-nav',
+									)
+								);
+							endif;
+							?>
+						</div>
+					</div><!-- .navbar-wrap -->
+				</div><!-- .container -->
+			</nav><!-- #site-navigation -->
+
+			<div class="container header-wrap">
+				<?php ashar_header_page_title(); ?>
+			</div><!-- .container -->
+		</header><!-- #masthead -->
+
+		<div id="content" class="site-content">

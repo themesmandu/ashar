@@ -1,8 +1,8 @@
 <?php
 /**
- * ashar Theme Customizer
+ * Ashar Theme Customizer
  *
- * @package ashar
+ * @package Ashar
  */
 
 /**
@@ -11,22 +11,64 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function ashar_customize_register( $wp_customize ) {
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial( 'blogname', array(
-			'selector'        => '.site-title a',
-			'render_callback' => 'ashar_customize_partial_blogname',
-		) );
-		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-			'selector'        => '.site-description',
-			'render_callback' => 'ashar_customize_partial_blogdescription',
-		) );
+		$wp_customize->selective_refresh->add_partial(
+			'blogname',
+			array(
+				'selector'        => '.site-title a',
+				'render_callback' => 'ashar_customize_partial_blogname',
+			)
+		);
+		$wp_customize->selective_refresh->add_partial(
+			'blogdescription',
+			array(
+				'selector'        => '.site-description',
+				'render_callback' => 'ashar_customize_partial_blogdescription',
+			)
+		);
 	}
+
+		// load custom control dropdown taxonomy.
+		require get_template_directory() . '/inc/customizer/custom-controls/class-ashar-dropdown-posts-control.php';
+
+		// Add panel for common theme options.
+		$wp_customize->add_panel(
+			'ashar_theme_options_panel',
+			array(
+				'title'       => esc_html__( 'Ashar Theme Options', 'ashar' ),
+				'description' => esc_html__( 'Aahar Theme Options.', 'ashar' ),
+				'priority'    => 150,
+			)
+		);
+
+		// load footer option.
+		require get_template_directory() . '/inc/customizer/theme-options/header.php';
+
+		// load footer option.
+		require get_template_directory() . '/inc/customizer/theme-options/footer.php';
+
+		// Add panel for front page theme options.
+		$wp_customize->add_panel(
+			'ashar_front_page_panel',
+			array(
+				'title'       => esc_html__( 'Ashar Front Page Options', 'ashar' ),
+				'description' => esc_html__( 'Front Page Theme Options.', 'ashar' ),
+				'priority'    => 140,
+			)
+		);
+
 }
 add_action( 'customize_register', 'ashar_customize_register' );
+
+/*
+ * Load customizer sanitization functions.
+ */
+require get_template_directory() . '/inc/customizer/sanitize.php';
 
 /**
  * Render the site title for the selective refresh partial.

@@ -4,14 +4,15 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package ashar
+ * @package Ashar
  */
 
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="container">
+	<div class="row">
+		<main id="main" class="col-lg-12">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -40,16 +41,16 @@ get_header();
 
 			the_posts_navigation();
 
-		else :
+			else :
 
-			get_template_part( 'template-parts/content', 'none' );
+				get_template_part( 'template-parts/content', 'none' );
 
 		endif;
-		?>
+			?>
 
 		</main><!-- #main -->
-	</section><!-- #primary -->
+	</div><!-- .row -->
+</div><!-- .container -->
 
 <?php
-get_sidebar();
 get_footer();

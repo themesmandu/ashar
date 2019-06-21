@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package ashar
+ * @package Ashar
  */
 
 /*
@@ -30,7 +30,7 @@ if ( post_password_required() ) {
 			<?php
 			$ashar_comment_count = get_comments_number();
 			if ( '1' === $ashar_comment_count ) {
-				printf(
+				printf( // WPCS: XSS OK.
 					/* translators: 1: title. */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'ashar' ),
 					'<span>' . get_the_title() . '</span>'
@@ -46,20 +46,27 @@ if ( post_password_required() ) {
 			?>
 		</h2><!-- .comments-title -->
 
-		<?php the_comments_navigation(); ?>
+		<h2 class="section-title"><span><?php esc_html_e('Comments', 'text_domain'); ?></span></h2>
 
 		<ol class="comment-list">
 			<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-			) );
+			wp_list_comments(
+				array(
+					'style'      => 'ol',
+					'short_ping' => true,
+				)
+			);
 			?>
 		</ol><!-- .comment-list -->
 
 		<?php
-		the_comments_navigation();
-
+		paginate_comments_links(
+			array(
+				'mid_size'  => 2,
+				'prev_text' => '<span class="previous">' . __( 'Prev', 'ashar' ),
+				'next_text' => '<span class="next">' . __( 'Next', 'ashar' ),
+			)
+		);
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>

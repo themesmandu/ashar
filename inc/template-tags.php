@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package ashar
+ * @package Ashar
  */
 
 if ( ! function_exists( 'ashar_posted_on' ) ) :
@@ -17,16 +17,10 @@ if ( ! function_exists( 'ashar_posted_on' ) ) :
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
-		$time_string = sprintf( $time_string,
-			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( DATE_W3C ) ),
-			esc_html( get_the_modified_date() )
-		);
+		$time_string = esc_attr( get_the_date( 'd F Y' ) );
+		$time_string = esc_html( get_the_date( 'd F Y' ) );
 
 		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'ashar' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -42,7 +36,7 @@ if ( ! function_exists( 'ashar_posted_by' ) ) :
 	function ashar_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'ashar' ),
+			esc_html_x( ': %s', 'post author', 'ashar' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -134,15 +128,20 @@ if ( ! function_exists( 'ashar_post_thumbnail' ) ) :
 
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 			<?php
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
+			the_post_thumbnail(
+				'post-thumbnail',
+				array(
+					'alt' => the_title_attribute(
+						array(
+							'echo' => false,
+						)
+					),
+				)
+			);
 			?>
 		</a>
 
-		<?php
+			<?php
 		endif; // End is_singular().
 	}
 endif;
