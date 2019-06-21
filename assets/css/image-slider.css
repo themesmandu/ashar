@@ -65,7 +65,6 @@
     bottom: 40%;
     right: 20%;
     left: 20%;
-    z-index: 9;
 }
 
 .slide_caption h2,
@@ -85,6 +84,7 @@
     font-weight: 700;
     background: #0038E3;
     color: #ffffff;
+    border: 1px solid #0038E3;
     letter-spacing: 0;
     border-radius: 6px;
     padding: 18px 34px;
@@ -92,6 +92,12 @@
     margin: 15px 0 0;
     top: 60%;
     animation: up .7s forwards;
+}
+
+.slide_caption a:hover {
+    background: #ffffff;
+    color: #222222;
+    border-color: #0038E3;
 }
 
 .slider_indicator {
@@ -273,6 +279,8 @@
     left: 28%;
     top: 178px;
 }
+
+.rai_shift {}
 
 
 /* -- Key Frame Animation For Line Above Image -- */

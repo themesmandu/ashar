@@ -127,5 +127,74 @@ get_header();
         </div>
 </section>
 
+<section class="section_four">
+    <div class="container">
+        <div class="testimonial">
+            <h2 class="section_title"><span>reason why</span> W're trusted by clients</h2>
+            <div class="row">
+                <div class="col-lg-4 column">
+                    <div class="content">
+                        <p>“Theme is @intuitive to use. Even for a WordPress beginner like me, Brook offers all the functions and features with simple instructions”</p>
+                        <cite>
+                            <h4>Harley Mills</h4>
+                            <span>PR Officer</span>
+                        </cite>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 column">
+                    <div class="content">
+                        <p>“Theme is @intuitive to use. Even for a WordPress beginner like me, Brook offers all the functions and features with simple instructions”</p>
+                        <cite>
+                            <h4>Harley Mills</h4>
+                            <span>PR Officer</span>
+                        </cite>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 column">
+                    <div class="content">
+                        <p>“Theme is @intuitive to use. Even for a WordPress beginner like me, Brook offers all the functions and features with simple instructions”</p>
+                        <cite>
+                            <h4>Harley Mills</h4>
+                            <span>PR Officer</span>
+                        </cite>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 column">
+                    <div class="content">
+                        <p>“Theme is @intuitive to use. Even for a WordPress beginner like me, Brook offers all the functions and features with simple instructions”</p>
+                        <cite>
+                            <h4>Harley Mills</h4>
+                            <span>PR Officer</span>
+                        </cite>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 column">
+                    <div class="content">
+                        <p>“Theme is @intuitive to use. Even for a WordPress beginner like me, Brook offers all the functions and features with simple instructions”</p>
+                        <cite>
+                            <h4>Harley Mills</h4>
+                            <span>PR Officer</span>
+                        </cite>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 column">
+                    <div class="content">
+                        <p>“Theme is @intuitive to use. Even for a WordPress beginner like me, Brook offers all the functions and features with simple instructions”</p>
+                        <cite>
+                            <h4>Harley Mills</h4>
+                            <span>PR Officer</span>
+                        </cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php
 get_footer();

@@ -18,7 +18,8 @@ function rai_shift(k, i, c) {
         left: 0,
         width: "100%",
         height: "100%",
-        overflow: "hidden"
+        overflow: "hidden",
+        zIndex: -9
     };
     var g = d("<div>").addClass("rai_effect rai_shift").css(e).appendTo(c);
     var a = d("<div>").css(e).css({
@@ -672,7 +673,8 @@ function rai_domino(m, i, k) {
         width: "100%",
         height: "100%",
         top: 0,
-        overflow: "hidden"
+        overflow: "hidden",
+        zIndex: -9
     }).appendTo(k);
     var b = $("<div>").addClass("rai_zoom").appendTo(f);
     var j = $("<div>").addClass("rai_parts").appendTo(f);
@@ -783,7 +785,7 @@ function rai_blast(q, j, m) {
         top: 0,
         width: "100%",
         height: "100%",
-        "z-index": 8
+        "z-index": -8
     });
     var d = q.cols;
     var p = q.rows;
@@ -1058,7 +1060,8 @@ function rai_fly(c, a, b) {
         top: 0,
         width: "100%",
         height: "100%",
-        transform: "translate3d(0,0,0)"
+        transform: "translate3d(0,0,0)",
+        zIndex: -9
     };
     var d = b.find(".rai_list");
     var g = e("<div>").addClass("rai_effect rai_fly").css(h).css({
