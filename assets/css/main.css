@@ -530,6 +530,13 @@ section p {
 }
 
 
+/* -- Blog Page Styles -- */
+
+.blog .main-navigation {
+    position: relative;
+}
+
+
 /* -- Footer Styles -- */
 
 #footer {
