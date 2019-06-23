@@ -14,6 +14,9 @@ get_header();
 	<div class="row">
 		<main id="main" class="col-md-8">
 			<div class="row">
+			<div class="page-content">
+					<h1 class="header-title"><?php the_archive_title(); ?></h1>
+			</div>
 
 				<?php if ( have_posts() ) : ?>
 
