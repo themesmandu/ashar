@@ -17,7 +17,7 @@ get_header();
 
 <div class="container">
 	<div class="row">
-		<main id="main" class="col-md-12 grid_content">
+		<main id="main" class="col-md-8">
 			<div class="row">
 				<?php
 				if ( have_posts() ) :
