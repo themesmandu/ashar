@@ -560,62 +560,62 @@ section p {
 
 /* -- Navbar Social Icons -- */
 
-#social-menu {
+#menu-social-menu {
     margin: 0;
 }
 
-#social-menu li {
+#menu-social-menu li {
     display: inline-block;
     margin: 0 32px 0 0;
     text-align: center;
 }
 
-#social-menu li:last-child {
+#menu-social-menu li:last-child {
     margin: 0;
 }
 
-#social-menu li a {
+#menu-social-menu li a {
     font-size: 0;
     color: #ffffff;
     transition: .3s;
 }
 
-#social-menu li a[href]:before {
+#menu-social-menu li a[href]:before {
     font-family: 'Font Awesome 5 Brands';
     content: "";
     font-size: 18px;
     font-weight: 900;
 }
 
-#social-menu li a[href*="facebook.com"]:before {
+#menu-social-menu li a[href*="facebook.com"]:before {
     content: "\f39e";
 }
 
-#social-menu li a[href*="twitter.com"]:before {
+#menu-social-menu li a[href*="twitter.com"]:before {
     content: "\f099";
 }
 
-#social-menu li a[href*="instagram.com"]:before {
+#menu-social-menu li a[href*="instagram.com"]:before {
     content: "\f16d";
 }
 
-#social-menu li a[href*="youtube.com"]:before {
+#menu-social-menu li a[href*="youtube.com"]:before {
     content: "\f167";
 }
 
-#social-menu li a[href*="linkedin.com"]:before {
+#menu-social-menu li a[href*="linkedin.com"]:before {
     content: "\f0e1";
 }
 
-#social-menu li a[href*="google.com"]:before {
+#menu-social-menu li a[href*="google.com"]:before {
     content: "\f0d5";
 }
 
-#social-menu li a[href*="tumblr.com"]:before {
+#menu-social-menu li a[href*="tumblr.com"]:before {
     content: "\f173";
 }
 
-#social-menu li a[href*="pinterest.com"]:before {
+#menu-social-menu li a[href*="pinterest.com"]:before {
     content: "\f231";
 }
 
