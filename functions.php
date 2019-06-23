@@ -186,6 +186,7 @@ function ashar_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ashar_scripts' );
 
+
 /**
  * Load theme required files.
  */
