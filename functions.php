@@ -137,7 +137,7 @@ function ashar_widgets_init() {
 				/* translators: %d: footer widget number. */
 				'name'          => sprintf( esc_html__( 'Footer %d', 'ashar' ), $i ),
 				'id'            => 'footer-' . $i,
-				'before_widget' => '<div id="%1$s" class="widget %2$s col-sm-12">',
+				'before_widget' => '<div id="%1$s" class="widget %2$s col-lg-3 col-md-6">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',

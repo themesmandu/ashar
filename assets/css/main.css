@@ -221,7 +221,7 @@ h6 {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 9;
+    z-index: 99;
     padding: 15px 0;
 }
 
@@ -530,6 +530,96 @@ section p {
 }
 
 
+/* -- Footer Styles -- */
+
+#footer {
+    background: #000000;
+    color: #ffffff;
+    padding: 100px 0;
+}
+
+#footer h1,
+#footer h2,
+#footer h3,
+#footer h4,
+#footer h5,
+#footer h6 {
+    color: #ffffff;
+}
+
+#footer h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 38px;
+    letter-spacing: .5px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+
+/* -- Navbar Social Icons -- */
+
+#social-menu {
+    margin: 0;
+}
+
+#social-menu li {
+    display: inline-block;
+    margin: 0 32px 0 0;
+    text-align: center;
+}
+
+#social-menu li:last-child {
+    margin: 0;
+}
+
+#social-menu li a {
+    font-size: 0;
+    color: #ffffff;
+    transition: .3s;
+}
+
+#social-menu li a[href]:before {
+    font-family: 'Font Awesome 5 Brands';
+    content: "";
+    font-size: 18px;
+    font-weight: 900;
+}
+
+#social-menu li a[href*="facebook.com"]:before {
+    content: "\f39e";
+}
+
+#social-menu li a[href*="twitter.com"]:before {
+    content: "\f099";
+}
+
+#social-menu li a[href*="instagram.com"]:before {
+    content: "\f16d";
+}
+
+#social-menu li a[href*="youtube.com"]:before {
+    content: "\f167";
+}
+
+#social-menu li a[href*="linkedin.com"]:before {
+    content: "\f0e1";
+}
+
+#social-menu li a[href*="google.com"]:before {
+    content: "\f0d5";
+}
+
+#social-menu li a[href*="tumblr.com"]:before {
+    content: "\f173";
+}
+
+#social-menu li a[href*="pinterest.com"]:before {
+    content: "\f231";
+}
+
+
 /* -- to the top css -- */
 
 .up-btn {
@@ -545,10 +635,10 @@ section p {
     transition: 0.5s;
     border-radius: 0;
     border: 1px solid #ffffff;
-    border-right: none;
     outline: none !important;
     transition: all .3s;
     transform: translate3d(100px, 0, 0);
+    z-index: 9;
 }
 
 .up-btn.show {
