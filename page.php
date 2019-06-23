@@ -18,6 +18,9 @@ get_header();
 <div class="container">
 	<div class="row">
 		<main id="main" class="col-lg-12">
+		<div class="page-content">
+					<h1 class="header-title"><?php single_post_title(); ?></h1>
+			</div>
 
 		<?php
 		while ( have_posts() ) :

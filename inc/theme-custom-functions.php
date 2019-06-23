@@ -16,7 +16,7 @@ if ( ! function_exists( 'ashar_title_split' ) ) :
 	 */
 	function ashar_title_split( $ashar_title ) {
 		$ashar_title_split = explode( ' ', $ashar_title );
-		$count                  = count( $ashar_title_split );
+		$count             = count( $ashar_title_split );
 		for ( $i = 0; $i < $count; $i++ ) {
 			if ( ( $count - 1 ) === $i ) {
 				echo wp_kses_post( '<span>' . $ashar_title_split[ $i ] . '</span>' );
@@ -30,52 +30,6 @@ if ( ! function_exists( 'ashar_title_split' ) ) :
 endif;
 
 
-if ( ! function_exists( 'ashar_header_page_title' ) ) :
-
-	/**
-	 * Display page title on header.
-	 *
-	 * @since 1.0.0
-	 */
-	function ashar_header_page_title() {
-		if ( is_front_page() ) :
-			?>
-			<div class="header-content">
-			<?php if ( ! empty( ashar_theme_options( 'front_header_title' ) ) ) { ?>
-				<h1><?php echo esc_html( ashar_theme_options( 'front_header_title' ) ); ?></h1>
-					<?php } ?>
-					<a href="<?php echo esc_url( ashar_theme_options( 'header_button_link' ) ); ?>"><?php echo esc_html( ashar_theme_options( 'header_button_text' ) ); ?></a>
-			</div>
-			<?php
-		elseif ( ! is_front_page() && is_home() || is_singular() ) :
-			?>
-			<div class="page-content">
-					<h1 class="header-title"><?php single_post_title(); ?></h1>
-			</div>
-			<?php
-		elseif ( is_archive() ) :
-			?>
-			<div class="page-content">
-					<h1 class="header-title"><?php the_archive_title(); ?></h1>
-			</div>
-			<?php
-		elseif ( is_search() ) :
-			?>
-			<div class="page-content">
-				<?php /* translators: %s: search query. */ ?>
-					<h1 class="header-title"><?php printf( esc_html__( 'Search Results for: %s', 'ashar' ), get_search_query() ); ?></h1>
-			</div>
-			<?php
-		elseif ( is_404() ) :
-			?>
-			<div class="page-content">
-					<h1 class="header-title"><?php echo esc_html__( 'Oops! That page can&#39;t be found.', 'ashar' ); ?></h1>
-			</div>
-			<?php
-		endif;
-	}
-
-endif;
 
 
 
