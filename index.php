@@ -20,35 +20,35 @@ get_header();
 		<main id="main" class="col-md-12 grid_content">
 			<div class="row">
 				<?php
-				if (have_posts()) :
+				if ( have_posts() ) :
 
 					/* Start the Loop */
-					while (have_posts()) :
+					while ( have_posts() ) :
 						the_post();
-						get_template_part('template-parts/content', get_post_type());
+						get_template_part( 'template-parts/content', get_post_type() );
 
 					endwhile;
 					?>
 				</div><!-- .row -->
-				<?php
-				the_posts_pagination(
-					array(
-						'mid_size'  => 2,
-						'prev_text' => '<span class="previous">' . __('Prev', 'ashar'),
-						'next_text' => '<span class="next">' . __('Next', 'ashar'),
-					)
-				);
+					<?php
+					the_posts_pagination(
+						array(
+							'mid_size'  => 2,
+							'prev_text' => '<span class="previous">' . __( 'Prev', 'ashar' ),
+							'next_text' => '<span class="next">' . __( 'Next', 'ashar' ),
+						)
+					);
 
-			else :
+					else :
 
-				get_template_part('template-parts/content', 'none');
+						get_template_part( 'template-parts/content', 'none' );
 
 			endif;
-			?>
+					?>
 
 		</main><!-- #main -->
 	</div><!-- .row -->
 </div><!-- .container -->
-
+<?php get_sidebar(); ?>
 <?php
 get_footer();
