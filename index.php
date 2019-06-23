@@ -16,38 +16,38 @@ get_header();
 ?>
 
 <div class="container">
+	<div class="page-content">
+		<h1 class="header-title"><?php single_post_title(); ?></h1>
+	</div>
+	
 	<div class="row">
 		<main id="main" class="col-md-8">
-			<div class="row">
-			<div class="page-content">
-					<h1 class="header-title"><?php single_post_title(); ?></h1>
-			</div>
+			<?php
+			if (have_posts()) :
+
+				/* Start the Loop */
+				while (have_posts()) :
+					the_post();
+					get_template_part('template-parts/content', get_post_type());
+
+				endwhile;
+				?>
+
 				<?php
-				if ( have_posts() ) :
+				the_posts_pagination(
+					array(
+						'mid_size'  => 2,
+						'prev_text' => '<span class="previous">' . __('Prev', 'ashar'),
+						'next_text' => '<span class="next">' . __('Next', 'ashar'),
+					)
+				);
 
-					/* Start the Loop */
-					while ( have_posts() ) :
-						the_post();
-						get_template_part( 'template-parts/content', get_post_type() );
+			else :
 
-					endwhile;
-					?>
-				</div><!-- .row -->
-					<?php
-					the_posts_pagination(
-						array(
-							'mid_size'  => 2,
-							'prev_text' => '<span class="previous">' . __( 'Prev', 'ashar' ),
-							'next_text' => '<span class="next">' . __( 'Next', 'ashar' ),
-						)
-					);
-
-					else :
-
-						get_template_part( 'template-parts/content', 'none' );
+				get_template_part('template-parts/content', 'none');
 
 			endif;
-					?>
+			?>
 
 		</main><!-- #main -->
 		<?php get_sidebar(); ?>

@@ -34,7 +34,7 @@
     font-size: 9px;
     content: "\f078";
     color: #ffffff;
-    margin: 3px 0 0 8px;
+    margin: 1px 0 0 8px;
     vertical-align: text-top;
     display: inline-block;
     cursor: pointer;
@@ -108,23 +108,20 @@
         display: inline-block;
         padding: 5px;
         line-height: 1;
+        vertical-align: text-top;
     }
     .main-navigation .navbar-nav .menu-item.menu-open>ul {
         display: block;
         position: absolute;
-        left: 0;
     }
     .sub-menu .caret {
         position: absolute;
-        top: 3px;
-        right: 15px;
+        top: 16px;
+        left: 15px;
     }
     .sub-menu .caret:after {
-        transform: rotate(-90deg);
+        transform: rotate(90deg);
         color: #333333;
-    }
-    .main-navigation .navbar-nav .menu-item.menu-open>ul ul {
-        left: 100%;
     }
 }
 
