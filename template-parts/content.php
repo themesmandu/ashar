@@ -11,6 +11,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+	<?php ashar_post_thumbnail(); ?>
+
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -23,24 +25,18 @@
 			<div class="entry-meta">
 				<?php
 				ashar_posted_on();
-				ashar_posted_by();
+				ashar_entry_footer();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php ashar_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 
-		the_content( '' );
+		the_content();
 
-		if ( ! is_singular() ) :
-			?>
-			<a class="more_link" href="<?php esc_url( the_permalink() ); ?>"><?php echo esc_html__( 'Read More', 'ashar' ); ?></a>	
-			<?php
-			endif;
 
 			wp_link_pages(
 				array(
