@@ -7,11 +7,13 @@
  * @package Ashar
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if (!is_active_sidebar('sidebar-1')) {
 	return;
 }
 ?>
 
 <aside id="sidebar" class="col-md-4">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	<div class="sidebar-content">
+		<?php dynamic_sidebar('sidebar-1'); ?>
+	</div>
 </aside><!-- #secondary -->
