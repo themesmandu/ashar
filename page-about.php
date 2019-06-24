@@ -1,5 +1,7 @@
 <?php
 /**
+ * Template Name: Custom About Page
+ *
  * The template for displaying all pages
  *
  * This is the template that displays all pages by default.
@@ -24,7 +26,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+			get_template_part( 'template-parts/content', 'aboutpage' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :

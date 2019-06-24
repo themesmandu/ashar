@@ -151,6 +151,11 @@
 				</div>
 			</div>
 						<?php endif; ?>
+						<?php if ( is_page() ) : ?>
+						<div class="page-content">
+					<h1 class="header-title"><?php single_post_title(); ?></h1>
+			</div>
+						<?php endif; ?>
 		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">
