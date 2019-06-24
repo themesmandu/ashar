@@ -45,6 +45,12 @@ require get_template_directory() . '/inc/theme-custom-functions.php';
  */
 require get_template_directory() . '/inc/dynamic-styles.php';
 
+
+/**
+ * Custom comment template.
+ */
+require get_template_directory() . '/inc/comment-callback.php';
+
 /**
  * Load Jetpack compatibility file.
  */
