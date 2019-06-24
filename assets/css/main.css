@@ -264,13 +264,17 @@ p.line-height {
 
 /* -- Navigation Styles -- */
 
-.main-navigation {
+.main-navigation,
+.home.blog .main-navigation {
+    padding: 36px 0;
+    z-index: 99;
+}
+
+.home .main-navigation {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    z-index: 99;
-    padding: 36px 0;
 }
 
 .main-navigation.fixed {
@@ -278,6 +282,7 @@ p.line-height {
     background: rgba(0, 0, 0, 0.9);
     animation: navs .9s;
     padding: 15px 0;
+    width: 100%;
 }
 
 .home .main-navigation .container {
