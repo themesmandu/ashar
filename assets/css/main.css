@@ -663,6 +663,13 @@ article figure img {
 }
 
 
+/* -- Single Page Styles -- */
+
+article.post .entry-title {
+    font-size: 32px;
+}
+
+
 /* -- Comment Form Styles -- */
 
 #comments {
