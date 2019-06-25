@@ -4,6 +4,7 @@
     object-fit: cover;
     width: 100%;
     max-width: unset !important;
+    margin-bottom: 0 !important;
 }
 
 #image_slider {

@@ -36,4 +36,10 @@ jQuery(document).ready(function($) {
     $('#up-btn').click(function() {
         $('html, body').animate({ scrollTop: 0 }, 1000);
     });
+
+    $(window).ready(function() {
+        $('li .sub_heading').click(function() {
+            $(this).parent().toggleClass('active').siblings().removeClass('active');
+        });
+    });
 });

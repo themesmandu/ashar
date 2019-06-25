@@ -22,8 +22,8 @@ get_header();
 
 				the_post_navigation(
 					array(
-						'prev_text'          => __('<i class="fas fa-chevron-left"></i>  %title', 'ghumgham'),
-						'next_text'          => __('%title <i class="fas fa-chevron-right"></i>', 'ghumgham'),
+						'prev_text'          => __('<i class="fas fa-arrow-left"></i>  <p><span>prev</span>%title</p>', 'ghumgham'),
+						'next_text'          => __('<p><span>next</span>%title</p> <i class="fas fa-arrow-right"></i>', 'ghumgham'),
 						'screen_reader_text' => ' ',
 					)
 				);

@@ -33,11 +33,16 @@
     font-weight: 900;
     font-size: 9px;
     content: "\f078";
-    color: #ffffff;
+    color: #333333;
     margin: 1px 0 0 8px;
     vertical-align: text-top;
     display: inline-block;
     cursor: pointer;
+}
+
+.home .menu-item-has-children:after,
+.page .menu-item-has-children:after {
+    color: #ffffff;
 }
 
 .sub-menu .menu-item-has-children::after {
@@ -104,20 +109,30 @@
         font-weight: 900;
         font-size: 9px;
         content: "\f078";
-        color: #ffffff;
+        color: #333333;
         display: inline-block;
         padding: 5px;
         line-height: 1;
         vertical-align: text-top;
     }
+    .home .caret:after,
+    .page .caret:after {
+        color: #ffffff;
+    }
     .main-navigation .navbar-nav .menu-item.menu-open>ul {
         display: block;
         position: absolute;
+        right: 0;
+        text-align: right;
+    }
+    .main-navigation .navbar-nav .menu-item.menu-open>ul ul {
+        right: 100%;
     }
     .sub-menu .caret {
         position: absolute;
         top: 16px;
         left: 15px;
+        color: #333333;
     }
     .sub-menu .caret:after {
         transform: rotate(90deg);
@@ -144,7 +159,7 @@
         right: 0;
         height: 2px;
         width: 22px;
-        background: #ff680a;
+        background: #ff5400;
     }
     #menu span:nth-child(2) {
         top: 6px;
@@ -198,6 +213,7 @@
         padding-left: 20px;
         width: auto;
         box-shadow: none;
+        text-align: left;
     }
     #navbarmenus .navbar-nav .menu-item .sub-menu .menu-item {
         border: none;
