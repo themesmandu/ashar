@@ -19,7 +19,7 @@ get_header();
     <div class="container">
         <h2 class="section_title">We're always ready for challenges.</h2>
         <div class="row">
-            <div class="col-lg-4 column">
+            <div class="col-lg-4 col-sm-6 column">
                 <figure>
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/one.jpg'; ?>" />
                 </figure>
@@ -30,7 +30,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="col-lg-4 column">
+            <div class="col-lg-4 col-sm-6 column">
                 <figure>
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/two.jpg'; ?>" />
                 </figure>
@@ -41,7 +41,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="col-lg-4 column">
+            <div class="col-lg-4 col-sm-6 column">
                 <figure>
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/three.jpg'; ?>" />
                 </figure>
@@ -52,7 +52,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="col-lg-4 column">
+            <div class="col-lg-4 col-sm-6 column">
                 <figure>
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/two.jpg'; ?>" />
                 </figure>
@@ -63,7 +63,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="col-lg-4 column">
+            <div class="col-lg-4 col-sm-6 column">
                 <figure>
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/three.jpg'; ?>" />
                 </figure>
@@ -74,7 +74,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="col-lg-4 column">
+            <div class="col-lg-4 col-sm-6 column">
                 <figure>
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/one.jpg'; ?>" />
                 </figure>
@@ -132,7 +132,7 @@ get_header();
         <div class="testimonial">
             <h2 class="section_title"><span>reason why</span> W're trusted by clients</h2>
             <div class="row">
-                <div class="col-lg-4 column">
+                <div class="col-lg-4 col-md-6 column">
                     <div class="content">
                         <p>“Theme is @intuitive to use. Even for a WordPress beginner like me, Brook offers all the functions and features with simple instructions”</p>
                         <cite>
@@ -142,7 +142,7 @@ get_header();
                     </div>
                 </div>
 
-                <div class="col-lg-4 column">
+                <div class="col-lg-4 col-md-6 column">
                     <div class="content">
                         <p>“Theme is @intuitive to use. Even for a WordPress beginner like me, Brook offers all the functions and features with simple instructions”</p>
                         <cite>
@@ -152,7 +152,7 @@ get_header();
                     </div>
                 </div>
 
-                <div class="col-lg-4 column">
+                <div class="col-lg-4 col-md-6 column">
                     <div class="content">
                         <p>“Theme is @intuitive to use. Even for a WordPress beginner like me, Brook offers all the functions and features with simple instructions”</p>
                         <cite>
@@ -162,7 +162,7 @@ get_header();
                     </div>
                 </div>
 
-                <div class="col-lg-4 column">
+                <div class="col-lg-4 col-md-6 column">
                     <div class="content">
                         <p>“Theme is @intuitive to use. Even for a WordPress beginner like me, Brook offers all the functions and features with simple instructions”</p>
                         <cite>
@@ -172,7 +172,7 @@ get_header();
                     </div>
                 </div>
 
-                <div class="col-lg-4 column">
+                <div class="col-lg-4 col-md-6 column">
                     <div class="content">
                         <p>“Theme is @intuitive to use. Even for a WordPress beginner like me, Brook offers all the functions and features with simple instructions”</p>
                         <cite>
@@ -182,7 +182,7 @@ get_header();
                     </div>
                 </div>
 
-                <div class="col-lg-4 column">
+                <div class="col-lg-4 col-md-6 column">
                     <div class="content">
                         <p>“Theme is @intuitive to use. Even for a WordPress beginner like me, Brook offers all the functions and features with simple instructions”</p>
                         <cite>

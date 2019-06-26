@@ -84,32 +84,34 @@ get_header();
 			</div>
 
 			<div class="col-md-6">
-				<h2 class="section_title">What we do</h2>
-				<ul>
-					<li class="column-content active">
-						<h3 class="sub_heading">Digital strategy</h3>
-						<div class="paragraph">
-							<p>Brook presents your services with flexible, convenient and multipurpose layouts. You can select your
-								favorite layouts & elements for particular projects with unlimited customization possibilities.</p>
-						</div>
-					</li>
+				<div class="content-wrap">
+					<h2 class="section_title">What we do</h2>
+					<ul>
+						<li class="column-content active">
+							<h3 class="sub_heading">Digital strategy</h3>
+							<div class="paragraph">
+								<p>Brook presents your services with flexible, convenient and multipurpose layouts. You can select your
+									favorite layouts & elements for particular projects with unlimited customization possibilities.</p>
+							</div>
+						</li>
 
-					<li class="column-content">
-						<h3 class="sub_heading">Digital strategy</h3>
-						<div class="paragraph">
-							<p>Brook presents your services with flexible, convenient and multipurpose layouts. You can select your
-								favorite layouts & elements for particular projects with unlimited customization possibilities.</p>
-						</div>
-					</li>
+						<li class="column-content">
+							<h3 class="sub_heading">Digital strategy</h3>
+							<div class="paragraph">
+								<p>Brook presents your services with flexible, convenient and multipurpose layouts. You can select your
+									favorite layouts & elements for particular projects with unlimited customization possibilities.</p>
+							</div>
+						</li>
 
-					<li class="column-content">
-						<h3 class="sub_heading">Digital strategy</h3>
-						<div class="paragraph">
-							<p>Brook presents your services with flexible, convenient and multipurpose layouts. You can select your
-								favorite layouts & elements for particular projects with unlimited customization possibilities.</p>
-						</div>
-					</li>
-				</ul>
+						<li class="column-content">
+							<h3 class="sub_heading">Digital strategy</h3>
+							<div class="paragraph">
+								<p>Brook presents your services with flexible, convenient and multipurpose layouts. You can select your
+									favorite layouts & elements for particular projects with unlimited customization possibilities.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -119,51 +121,53 @@ get_header();
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				<h2 class="section_title">Features you will love</h2>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="col-row">
-							<span><i class="fas fa-desktop"></i></span>
-							<div class="col-content">
-								<h3 class="sub_heading">Digital marketing</h3>
-								<p>We conduct the marketing of products & services using latest digital technologies.</p>
+				<div class="content-wrap">
+					<h2 class="section_title">Features you will love</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="col-row">
+								<span><i class="fas fa-desktop"></i></span>
+								<div class="col-content">
+									<h3 class="sub_heading">Digital marketing</h3>
+									<p>We conduct the marketing of products & services using latest digital technologies.</p>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-md-6">
-						<div class="col-row">
-							<span><i class="fas fa-desktop"></i></span>
-							<div class="col-content">
-								<h3 class="sub_heading">Digital marketing</h3>
-								<p>We conduct the marketing of products & services using latest digital technologies.</p>
+						<div class="col-md-6">
+							<div class="col-row">
+								<span><i class="fas fa-desktop"></i></span>
+								<div class="col-content">
+									<h3 class="sub_heading">Digital marketing</h3>
+									<p>We conduct the marketing of products & services using latest digital technologies.</p>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-md-6">
-						<div class="col-row">
-							<span><i class="fas fa-desktop"></i></span>
-							<div class="col-content">
-								<h3 class="sub_heading">Digital marketing</h3>
-								<p>We conduct the marketing of products & services using latest digital technologies.</p>
+						<div class="col-md-6">
+							<div class="col-row">
+								<span><i class="fas fa-desktop"></i></span>
+								<div class="col-content">
+									<h3 class="sub_heading">Digital marketing</h3>
+									<p>We conduct the marketing of products & services using latest digital technologies.</p>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-md-6">
-						<div class="col-row">
-							<span><i class="fas fa-desktop"></i></span>
-							<div class="col-content">
-								<h3 class="sub_heading">Digital marketing</h3>
-								<p>We conduct the marketing of products & services using latest digital technologies.</p>
+						<div class="col-md-6">
+							<div class="col-row">
+								<span><i class="fas fa-desktop"></i></span>
+								<div class="col-content">
+									<h3 class="sub_heading">Digital marketing</h3>
+									<p>We conduct the marketing of products & services using latest digital technologies.</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="col-md-4">
+			<div class="col-md-4 col-right">
 				<figure>
 					<img src="<?php echo get_template_directory_uri() . '/assets/images/mobile.png'; ?>" />
 				</figure>

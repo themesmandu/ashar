@@ -33,9 +33,6 @@ function ashar_customize_register( $wp_customize ) {
 		);
 	}
 
-		// load custom control dropdown taxonomy.
-		require get_template_directory() . '/inc/customizer/custom-controls/class-ashar-dropdown-posts-control.php';
-
 		// Add panel for common theme options.
 		$wp_customize->add_panel(
 			'ashar_theme_options_panel',

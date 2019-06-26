@@ -5,6 +5,7 @@
     width: 100%;
     max-width: unset !important;
     margin-bottom: 0 !important;
+    min-height: 100%;
 }
 
 #image_slider {
@@ -54,6 +55,7 @@
 
 #image_slider .slider_images {
     overflow: hidden;
+    min-height: 275px;
 }
 
 .slide_caption {
@@ -105,8 +107,10 @@
     font-size: 16px;
     position: absolute;
     bottom: 11%;
-    left: 46.5%;
+    left: 15px;
+    right: 15px;
     z-index: 9;
+    text-align: center;
 }
 
 .slider_indicator a {
@@ -235,7 +239,7 @@
 .slide_caption span.square-14 {
     bottom: unset;
     left: unset;
-    top: 275px;
+    top: 28%;
     right: 50%;
     animation: up 1s forwards;
 }
@@ -245,7 +249,7 @@
     width: 30px;
     bottom: unset;
     left: unset;
-    top: 335px;
+    top: 34%;
     right: 48.4%;
     animation: up 1s forwards;
 }
@@ -322,5 +326,82 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 1440px) {
+    .slide_caption div {
+        right: 15px;
+        left: 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .slide_caption span {
+        display: none;
+    }
+    .slide_caption div {
+        top: 32%;
+    }
+    .slide_caption h2 {
+        font-size: 54px;
+        margin-bottom: 38px;
+    }
+}
+
+@media (max-width: 991px) {
+    .slide_caption h2 {
+        font-size: 42px;
+    }
+    .slide_caption a {
+        padding: 15px 20px
+    }
+    .slider_indicator a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .slide_caption h2 {
+        font-size: 30px;
+    }
+    .slide_caption a {
+        font-size: 12px;
+        padding: 14px 20px;
+    }
+    .slider_indicator {
+        text-align: right;
+    }
+    .slider_indicator a {
+        margin-right: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide_caption h2 {
+        font-size: 26px;
+        margin-bottom: 32px;
+    }
+    .slide_caption a {
+        font-size: 10px;
+        padding: 10px 14px;
+        border-radius: 3px;
+    }
+    .slider_indicator a {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .slide_caption div {
+        top: 40%;
+    }
+    .slide_caption h2 {
+        font-size: 18px;
+        margin-bottom: 26px;
+    }
+    .slide_caption a {
+        font-size: 8px;
+        padding: 8px 10px;
     }
 }

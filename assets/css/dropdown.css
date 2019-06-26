@@ -159,7 +159,11 @@
         right: 0;
         height: 2px;
         width: 22px;
-        background: #ff5400;
+        background: #222222;
+    }
+    .home #menu span,
+    .page #menu span {
+        background: #ffffff;
     }
     #menu span:nth-child(2) {
         top: 6px;
