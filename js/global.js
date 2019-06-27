@@ -42,4 +42,28 @@ jQuery(document).ready(function($) {
             $(this).parent().toggleClass('active').siblings().removeClass('active');
         });
     });
+
+    // Scroll Effects Java Script
+
+    $(window).ready(function() {
+        var $class = $('.section_title, section .column, .section_three .content, section .row figure, section .col-row, .contact-heading, .column-content address p, .column-content .social-menu, .section_about_three .column-content, .section_about_two .column-content ');
+        var height = $(window);
+
+        $(window).scroll(function() {
+            var web_height = height.height();
+            var web_top = height.scrollTop();
+            var web_bottom = (web_height + web_top);
+
+            $.each($class, function() {
+                var col = $(this);
+                var col_height = col.outerHeight();
+                var col_top = col.offset().top;
+                var col_bottom = (col_height + col_top);
+
+                if ((col_top >= web_top) && (col_bottom <= web_bottom)) {
+                    col.addClass('view');
+                }
+            });
+        });
+    });
 });

@@ -484,7 +484,7 @@ section h4 {
 }
 
 .section_two .content-wrap,
-.section_two figure {
+.section_two .contact-figure {
     width: 50%;
     padding: 0 15px;
     margin: auto 0;
@@ -1524,47 +1524,6 @@ section .sub_heading {
 }
 
 
-/* -- Error 404 Styles -- */
-
-.error404 section,
-.search section {
-    padding: 0;
-}
-
-.error404 section .widget {
-    margin-top: 50px;
-}
-
-.error404 section ul {
-    padding-left: 18px;
-}
-
-.error404 section li {
-    margin-bottom: 10px;
-    list-style-type: disc;
-    color: rgba(255, 104, 10, 0.7);
-}
-
-.error404 section p,
-.error404 section li a,
-.search section p {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-.error404 section a {
-    color: rgba(255, 104, 10, 0.7);
-    box-shadow: 0 1px 0 rgba(255, 104, 10, 0.7);
-}
-
-.error404 section .screen-reader-text,
-.search section .screen-reader-text {
-    margin-bottom: 7px;
-    display: block;
-}
-
-
 /* -- to the top css -- */
 
 .up-btn {
@@ -1614,11 +1573,48 @@ section .sub_heading {
 
 /* -- Error404 Hfeed Styles -- */
 
+.error404 section,
+.search section,
+.error404 .page-header {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    text-align: center;
+}
+
+.error404 section .widget {
+    margin-top: 50px;
+}
+
+.error404 section ul {
+    padding-left: 18px;
+}
+
+.error404 section li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
+
+.error404 section p,
+.error404 section li a,
+.search section p {
+    font-size: 14px;
+    color: #999999;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.error404 section .screen-reader-text,
+.search section .screen-reader-text {
+    margin-bottom: 7px;
+    display: block;
+}
+
 .error404 .page-content,
 .search-no-results .page-content {
     text-align: left;
     max-width: 740px;
     margin: 0 auto;
+    padding: 32px 0;
 }
 
 .error404 header.site-header,
@@ -1628,6 +1624,46 @@ section .sub_heading {
 
 .search-no-results .no-results {
     padding-top: 45px;
+}
+
+
+/* -- Column Effects Jquery Styles -- */
+
+section .column,
+.section_title,
+.section_three .content,
+section .row figure,
+section .col-row,
+.contact-heading,
+.column-content address p,
+.column-content .social-menu,
+.section_about_three .column-content,
+.section_about_two .column-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .35s linear;
+}
+
+section .row figure,
+.column-content address p,
+.column-content .social-menu,
+.section_about_three .column-content,
+.section_about_two .column-content {
+    transform: translateY(50px);
+}
+
+section .column.view,
+.section_title.view,
+.section_three .content.view,
+section .row figure.view,
+section .col-row.view,
+.contact-heading.view,
+.column-content address p.view,
+.column-content .social-menu.view,
+.section_about_three .column-content.view,
+.section_about_two .column-content.view {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 

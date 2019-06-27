@@ -111,10 +111,13 @@ get_header();
                     </div>
                 </div>
             </div>
+            
+            <div class="contact-figure">
+                <figure>
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/section_two_content_img.png'; ?>" />
+                </figure>
+            </div>
 
-            <figure>
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/section_two_content_img.png'; ?>" />
-            </figure>
         </div>
     </div>
 </section>
