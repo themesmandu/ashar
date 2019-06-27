@@ -38,7 +38,9 @@
         max-width: 100%;
         margin-top: 52px;
     }
-    header.site-header {
+    .home header.site-header,
+    .page-template header.site-header,
+    .page-template-default header.site-header {
         height: 400px !important;
     }
     .contact-row .column-content {
