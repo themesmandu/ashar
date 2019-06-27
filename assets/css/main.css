@@ -484,7 +484,7 @@ section h4 {
 }
 
 .section_two .content-wrap,
-.section_two .contact-figure {
+.section_two figure {
     width: 50%;
     padding: 0 15px;
     margin: auto 0;
