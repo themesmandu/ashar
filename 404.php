@@ -13,6 +13,11 @@ get_header();
 <div class="container">
 	<div class="row">
 		<main id="main" class="col-lg-12">
+		<header class="page-header">
+				<h1 class="page-title">
+					<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ashar' ); ?>
+				</h1>
+			</header><!-- .page-header -->
 
 			<section class="error-404 not-found">
 
